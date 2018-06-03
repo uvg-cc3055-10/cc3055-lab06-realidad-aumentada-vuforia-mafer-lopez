@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Maria Fernanda Lopez Diaz
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
@@ -11,6 +12,7 @@ public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
+        //cuando este es presionado se reproduce un canto del pajaro
         birdAnim.SetTrigger("sing");
     }
 
@@ -22,6 +24,7 @@ public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler
     // Use this for initialization
     void Start()
     {
+        //se obtiene el componente virtual del boton
         virtualBtn = GetComponent<VirtualButtonBehaviour>();
         virtualBtn.RegisterEventHandler(this);
     }
